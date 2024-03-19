@@ -1,0 +1,10 @@
+nombre y apellido: camilo
+num empleado: 1
+edad: 22
+dni: 0
+
+nombre y apellido: santi
+num empleado: 4
+edad: 99
+dni: 0
+
