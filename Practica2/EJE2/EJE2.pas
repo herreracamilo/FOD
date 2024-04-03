@@ -88,7 +88,7 @@ type
     var
         i:info_detalle;
     begin
-        assign(archDetalle, 'alumno');
+        assign(archDetalle, 'detalle');
         rewrite(archDetalle);
         leoInfo(i);
         while(i.cod<>-1)do begin
@@ -114,7 +114,7 @@ type
 
         while not eof (archAlumno)do begin
             read(archAlumno, a);
-            write(texto, a.codigo, ' ',a.nombre, ' ',a.apellido, ' ',a.aprobadasSinF, ' ',a.aprobadasConF);
+            writeln(texto, a.codigo, ' ',a.nombre, ' ',a.apellido, ' ',a.aprobadasSinF, ' ',a.aprobadasConF);
         end;
 
         close(archAlumno);
