@@ -124,12 +124,49 @@ type
         writeln('archivo txt creado correctamente');
         writeln('------------------------------------------');
     end;
+    
+    procedure actualizarMaestro(var archAlumno:archivo_alumno; var archDetalle:archivo_detalle);
+    var
+        regm:alumno;
+        regd:info_detalle;
+        codigoActual:integer;
+    begin
+        assign(archAlumno,'alumno');
+        assign(archDetalle,'detalle');
+        reset(archAlumno);
+        reset(archDetalle);
+        while not eof (archDetalle)do begin
+            read(archDetalle, regd);
+            read(archAlumno, regm);
+            while(regm.codigo <> regd.cod)do begin
+                read(archAlumno, regm);
+            end;
+            codigoActual:= regd.cod;
+            while(regd.cod = codigoActual)do begin
+                if(regd.cursada = 'aprobada')then
+                    regm.aprobadasSinF:= regm.aprobadasSinF + 1;
+                if(regd.final = 'aprobada')then begin
+                    regm.aprobadasSinF:= regm.aprobadasSinF - 1;
+                    regm.aprobadasConF:= regm.aprobadasConF + 1;
+                end;
+                read(archDetalle,regd);
+            end;
+            seek(archAlumno, filepos(archAlumno)-1);
+            write(archAlumno, regm);
+        end;
+        close(archAlumno);
+        close(archDetalle);
+    end;
+
+
 
 var
     archAlumno: archivo_alumno;
     archDetalle: archivo_detalle;
 begin
-    creoArchAlumno(archAlumno);
-    creoArchDetalle(archDetalle);
+    //creoArchDetalle(archDetalle); //este lo usé para crear el detalle para probar el programa
+    
+    creoArchAlumno(archAlumno); // este crea el maestro tambien para probar
+    actualizarMaestro(archAlumno,archDetalle);
     exportarTXT(archAlumno);
 end.
