@@ -14,6 +14,8 @@ b. Listar en un archivo de texto llamado “stock_minimo.txt” aquellos product
 stock actual esté por debajo del stock mínimo permitido.*)
 
 program EJE3;
+const
+    valoralto = 9999;
 type
     producto = record
         codigo:integer;
@@ -94,4 +96,75 @@ type
         writeln('------------------------------------------');
     end;
 
+    procedure leer(var det:detalle; var regd:info_detalle);
+    begin
+        if not eof(det)then
+            read(det,regd)
+        else
+        begin
+            regd.codigo:=valoralto;
+        end;
+    end;
     
+    procedure actualizarMaestro(var mae:maestro; var det:detalle);
+    var
+        regd:info_detalle;
+        regm:producto;
+    begin
+        assign(mae,'maestro');
+        assign(det,'detalle');
+        reset(mae);
+        reset(det);
+
+        leer(det,regd);
+        while(regd.codigo <> valoralto)do begin
+            read(mae, regm);
+            while(regm.codigo <> regd.codigo)do begin
+                read(mae,regm);
+            end;
+            while(regm.codigo = regd.codigo)do begin
+                regm.stock_actual:= regm.stock_actual - regd.unidades_vendidas;
+                leer(det,regd);
+            end;
+            seek(mae, filepos(mae)-1);
+            write(mae,regm);
+        end;
+        close(mae);
+        close(det);
+        writeln('------------------------------------------');
+        writeln('archivo maestro actualizado correctamente');
+        writeln('------------------------------------------');
+    end;
+
+    procedure exportarTXT(var mae:maestro);
+    var
+        p:producto;
+        texto:text;
+    begin
+        assign(texto,'stock_minimo.txt');
+        rewrite(texto);
+
+        assign(mae,'maestro');
+        reset(mae);
+
+        while not eof(mae)do begin
+            read(mae,p);
+            if(p.stock_actual < p.stock_minimo)then
+                writeln(texto, p.codigo, ' | ',p.nombre,' | $',p.precio_venta:2:0,' | actual ',p.stock_actual,' | minimo ',p.stock_minimo);
+        end;
+        close(mae);
+        close(texto);
+        writeln('------------------------------------------');
+        writeln('archivo texto creado correctamente');
+        writeln('------------------------------------------');
+    end;
+
+var
+    det:detalle;
+    mae:maestro;
+begin
+    //crearMaestro(mae);
+    //crearDetalle(det);
+    //actualizarMaestro(mae,det);
+    exportarTXT(mae);
+end.

@@ -1,0 +1,6 @@
+maestro original 
+
+1 | lechuga | $100 | actual 50 | minimo 60
+2 | tomate | $300 | actual 42 | minimo 55
+3 | manzana | $800 | actual 100 | minimo 60
+4 | banana | $500 | actual 8 | minimo 10
