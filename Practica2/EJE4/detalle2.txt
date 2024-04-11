@@ -1,3 +1,3 @@
-a | 9 | 12
-b | 5 | 10
-c | 2 | 5
+535 9 12 buenos aires
+314 5 10 cordoba
+034 2 5 mendoza

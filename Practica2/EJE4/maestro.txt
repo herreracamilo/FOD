@@ -1,0 +1,23 @@
+0 0 buenos aires
+0 0 catamarca
+0 0 chaco
+0 0 chubut
+0 0 cordoba
+0 0 corrientes
+0 0 entre rios
+0 0 formosa
+0 0 jujuy
+0 0 la pampa
+0 0 la rioja
+0 0 mendoza
+0 0 misiones
+0 0 neuquen
+0 0 rio negro
+0 0 salta
+0 0 san juan
+0 0 san luis
+0 0 santa cruz
+0 0 santa fe
+0 0 santiago del estero
+0 0 tierra del fuego
+0 0 tucuman

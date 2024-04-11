@@ -1,4 +1,23 @@
-a | 24 | 30
-b | 36 | 68
-c | 17 | 22
-d | 0 | 10
+15 | 20 |  buenos aires
+5 | 7 |  catamarca
+0 | 0 |  chaco
+0 | 0 |  chubut
+5 | 10 |  cordoba
+0 | 0 |  corrientes
+12 | 20 |  entre rios
+0 | 0 |  formosa
+0 | 0 |  jujuy
+0 | 0 |  la pampa
+0 | 0 |  la rioja
+2 | 5 |  mendoza
+0 | 0 |  misiones
+0 | 0 |  neuquen
+0 | 0 |  rio negro
+0 | 0 |  salta
+0 | 0 |  san juan
+0 | 0 |  san luis
+0 | 0 |  santa cruz
+0 | 0 |  santa fe
+0 | 0 |  santiago del estero
+0 | 0 |  tierra del fuego
+0 | 0 |  tucuman
