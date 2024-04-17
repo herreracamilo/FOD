@@ -8,7 +8,7 @@ NOTA: Los archivos están ordenados por nombre de provincia y en los archivos de
 pueden venir 0, 1 ó más registros por cada provincia.
 *)
 
-program EJE4V2;
+program EJE4;
 const
     valoralto = 'ZZZZZ';
 type
