@@ -105,7 +105,10 @@ type
         min.codCepa:= valoralto;
         for i:= 1 to DF do begin
             if(vecR[i].codLocalidad < min.codLocalidad) or ((vecR[i].codLocalidad = min.codLocalidad) and (vecR[i].codCepa < min.codCepa))then begin
-                
+                min:= vecR[i];
+                pos:= i;
             end;
         end;
+        if(min.codLocalidad <> valoralto)then
+            leer(vecDet[pos],vecR[pos]);
     end;
