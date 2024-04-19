@@ -44,8 +44,8 @@ type
 
         while not eof(texto) do begin
             with i do begin
-                read(texto,codLocalidad, codCepa,cantCasosActivos,cantCasosNuevos,cantRecuperados,cantFallecidos);
-                writeln(det,i);
+                readln(texto,codLocalidad, codCepa,cantCasosActivos,cantCasosNuevos,cantRecuperados,cantFallecidos);
+                write(det,i);
             end;
         end;
         close(texto);
@@ -97,7 +97,7 @@ type
             dato.codLocalidad:=valoralto;
     end;
 
-    procedure minimo(var vecDet:vectorDetalles; var vecR:vectorRegistroDet var min:infoDetalle);
+    procedure minimo(var vecDet:vectorDetalles; var vecR:vectorRegistroDet ;var min:infoDetalle);
     var
         i,pos:integer;
     begin
@@ -112,3 +112,69 @@ type
         if(min.codLocalidad <> valoralto)then
             leer(vecDet[pos],vecR[pos]);
     end;
+
+    procedure actualizarMaestro(var mae:maestro; var vecDet:vectorDetalles);
+    var
+        i:integer;
+        vecR:vectorRegistroDet;
+        min:infoDetalle;
+        regm:infoMaestro;
+    begin
+        assign(mae,'maestro');
+        reset(mae);
+        for i:= 1 to DF do begin
+            reset(vecDet[i]);
+            leer(vecDet[i],vecR[i]);
+        end;
+        minimo(vecDet,vecR,min);
+        while(min.codLocalidad<>valoralto)do begin
+            read(mae,regm);
+            while(regm.codLocalidad <> min.codLocalidad)do begin
+                read(mae,regm);
+            end;
+            while(regm.codLocalidad = min.codLocalidad)do begin
+                while(regm.codCepa <> min.codCepa)do
+                    read(mae,regm);
+                while(regm.codLocalidad = min.codLocalidad) and(regm.codCepa = min.codCepa)do begin
+                    regm.cantCasosActivos:= regm.cantCasosActivos + min.cantCasosActivos;
+                    regm.cantCasosNuevos:= regm.cantCasosNuevos + min.cantCasosNuevos;
+                    regm.cantRecuperados:= regm.cantRecuperados + min.cantRecuperados;
+                    regm.cantFallecidos:= regm.cantFallecidos + min.cantFallecidos;
+                    minimo(vecDet,vecR,min);
+                end;
+                seek(mae,filepos(mae)-1);
+                write(mae,regm);
+            end;
+        end;
+        close(mae);
+        for i:= 1 to DF do
+            close(vecDet[i]);
+        writeln(' ========== MAESTRO ACTUALIZADO =========')
+    end;
+
+    procedure imprimirMae(var mae:maestro);
+    var
+        i:infoMaestro;
+    begin
+        assign(mae,'maestro');
+        reset(mae);
+        while not eof(mae) do begin
+            with i do begin
+                read(mae,i);
+                writeln(codLocalidad, nomLocalidad);
+                writeln(codCepa, nomCepa);
+                writeln(' A ',cantCasosActivos,' N ', cantCasosNuevos,' R ', cantRecuperados,' F ', cantFallecidos);
+            end;
+        end;
+        close(mae);
+    end;
+
+var
+    mae:maestro;
+    vecDet:vectorDetalles;
+begin
+    crearMaestro(mae);
+    crearDetalles(vecDet);
+    actualizarMaestro(mae, vecDet);
+    imprimirMae(mae);
+end.
