@@ -1,0 +1,10 @@
+cabecera
+0
+rosa
+7
+margarita
+18
+girasol
+21
+violeta
+4
