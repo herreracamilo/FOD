@@ -75,7 +75,7 @@ type
 
     procedure borradoFisico(var mae:maestro);
     var
-        
+        a:ave;
     begin
         
     end;
