@@ -1,9 +1,0 @@
-1234 599.99 Samsung
-0 10 Smartphone con cámara de 48 MP
-Galaxy S20
-23 45 699.99 Apple
-1 5 iPhone con chip A14 Bionic
-iPhone 12 Pro
-34 56 449.99 Xiaomi
-4 15 secomieron7
-Xiaomi Mi 11
