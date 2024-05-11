@@ -1,7 +1,0 @@
-Enunciado --> https://justpaste.it/2s7oq
-
-A) 
-
-B) fórmula N = (M-1) * A + M * B + C
-Nodo = 512 bytes
-Integer = 4 bytes
