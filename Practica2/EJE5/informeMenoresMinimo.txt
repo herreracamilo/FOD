@@ -1,6 +1,0 @@
- tomate
-perita | 1 | 63 | 
- berenjena
-grande | 3 | 308 | 
- frutilla
-roja | 5 | 544 | 

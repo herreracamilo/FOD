@@ -1,4 +1,0 @@
-293 6 8 buenos aires
-492 4 6 catamarca
-943 1 1 catamarca
-931 12 20 entre rios
