@@ -1,4 +1,4 @@
-https://justpaste.it/f5kf8
+Enunciado --> https://justpaste.it/f5kf8
 
 A) Las estructuras necesarias para organizar el archivo de alumnos como un arbol B serian: 
 
