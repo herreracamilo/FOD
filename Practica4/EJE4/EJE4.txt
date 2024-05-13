@@ -13,3 +13,4 @@ begin
     Read(A, nodo^);
   end;
 end;
+.
