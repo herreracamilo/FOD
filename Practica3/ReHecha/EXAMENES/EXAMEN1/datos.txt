@@ -1,0 +1,15 @@
+0 0 cabecera
+-
+-
+1 22 Camilo
+07/09/2001
+la plata
+2 30 Laura
+15/03/1994
+Buenos Aires
+3 28 Martin
+22/11/1995
+Córdoba
+4 25 Sofia
+10/06/1998
+Rosario

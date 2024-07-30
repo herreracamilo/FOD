@@ -1,0 +1,27 @@
+-4 21.30 110  Amor Eterno
+Romance
+Laura García
+
+1 19.99 120  El Viaje Imaginario
+Aventura
+Carlos Pérez
+
+7 734.45 129 Riky Martin
+Show
+Yo
+
+3 17.75 95  Secretos del Pasado
+Misterio
+Miguel Rodríguez
+
+0 0.00 0  cabecera
+cabecera
+cabecera
+
+5 18.00 105  La Búsqueda del Saber
+Fantasía
+Pedro Hernández
+
+6 349.02 120 Mafalda
+Comedia
+Camilo

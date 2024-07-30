@@ -1,0 +1,18 @@
+0 0 0 cabecera
+cabecera
+cabecera
+1 19.99 120 El Viaje Imaginario
+Aventura
+Carlos Pérez
+2 24.50 140 La Sombra del Destino
+Drama
+Ana López
+3 17.75 95 Secretos del Pasado
+Misterio
+Miguel Rodríguez
+4 21.30 110 Amor Eterno
+Romance
+Laura García
+5 18.00 105 La Búsqueda del Saber
+Fantasía
+Pedro Hernández

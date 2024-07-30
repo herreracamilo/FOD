@@ -1,0 +1,1 @@
+codigo,precio_venta,stockact,stockmin,nombre

@@ -1,0 +1,10 @@
+1 0 CUENTA001
+camilo
+2 10 CUENTA002
+morena
+3 40 CUENTA003
+santiago
+4 30 CUENTA004
+leo
+5 50 CUENTA005
+ara

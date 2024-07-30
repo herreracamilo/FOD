@@ -1,0 +1,4 @@
+1001 25.50 30 10 Detergente
+1002 45.75 50 20 Lavandina
+1003 15.99 100 25 Jabon Liquido
+1004 9.80 200 50 Desinfectante

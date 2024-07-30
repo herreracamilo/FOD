@@ -1,0 +1,12 @@
+1 CUENTA005
+Este es el mensaje para el usuario 1.
+2 CUENTA003
+Este es el mensaje para el usuario 2.
+2 CUENTA003
+Este es el mensaje para el usuario 2.
+3 CUENTA002
+Este es el mensaje para el usuario 3.
+4 CUENTA001
+Este es el mensaje para el usuario 4.
+5 CUENTA004
+Este es el mensaje para el usuario 5.
